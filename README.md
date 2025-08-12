@@ -181,9 +181,9 @@ Repository entity showing correct PR count:
 
 ### 3.4 Scorecard Testing and Validation
 
-- ✅ Created test pull requests in GitHub repository
-- ✅ Triggered integration sync
-- ✅ Verified scorecard evaluation
+- Created test pull requests in GitHub repository
+- Triggered integration sync
+- Verified scorecard evaluation
 
 #### Final Validation:
 **Repository "rentrite-infra-gitOps" with 6 open PRs:**
@@ -198,6 +198,8 @@ Repository entity showing correct PR count:
 
 ![Scorecard Results](screenshots/port-scorecard-3.png)
 ![Scorecard Results](screenshots/port-scorecard-4.png)
+![Scorecard Results](screenshots/port-scorecard-5.png)
+![Scorecard Results](screenshots/port-scorecard-6.png)
 
 ## Exercise #4: GitHub Workflow Troubleshooting Guide
 
