@@ -1,7 +1,5 @@
 # Port Support Engineer Assignment - Solution Document
 
-**Candidate:** Matthew Akinola
-
 ## Exercise #1: JQ Patterns for API Response Transformation
 
 ### Solution Overview
