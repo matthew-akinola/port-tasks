@@ -51,38 +51,44 @@ Successfully created JQ patterns to extract specific information from Kubernetes
 Successfully implemented end-to-end integration between Port, Jira, and GitHub with proper data model relationships and component mapping.
 
 ### 2.1 Initial Setup Completed
-- ✅ Logged into Port using provided credentials
-- ✅ Installed Port's GitHub App with proper permissions
-- ✅ GitHub repositories automatically imported into Port
-- ✅ Repository blueprint created automatically
+- Logged into Port using provided credentials
+- Installed Port's GitHub App with proper permissions
+- GitHub repositories automatically imported into Port
+- Repository blueprint created automatically
 
 ![Port GitHub Integration](screenshots/catalog-github.png)
+![Port GitHub Integration](screenshots/catalog-github2.png)
 
 ### 2.2 Jira Account and Project Setup
 
-- ✅ Created free Jira account (akinolatolulope24.atlassian.net)
-- ✅ Created new project with specifications:
+- Created free Jira account (akinolatolulope24.atlassian.net)
+- Created new project with specifications:
   - Category: Software Development
   - Template: Scrum
   - Type: Company Managed Project (for components access)
   - Project Key: PORT
 
-- ✅ Created Jira components matching GitHub repositories:
+- Created Jira components matching GitHub repositories:
   - Component 1: "ec2-finOps" (matches GitHub repo)
   - Component 2: "rentrite-infra-gitOps" (matches GitHub repo)
 
+![Port GitHub Integration](screenshots/jira-project.png)
+![Port GitHub Integration](screenshots/jira-project2.png)
+
 ### 2.3 Port Ocean Jira Integration
-- ✅ Installed Jira Ocean integration using "Scheduled" method
-- ✅ Configured integration with GitHub workflow deployment
-- ✅ Integration configuration:
+- Installed Jira Ocean integration using "Scheduled" method
+- Configured integration with GitHub workflow deployment
+- Integration configuration:
   - Type: Scheduled (every hour) and workflow dispatch (for manual triggering)
   - Deployment: GitHub Actions workflow
   - Authentication: Jira API token and user email
 
+![Port GitHub Integration](screenshots/jira-git-workflow.png)
+![Port GitHub Integration](screenshots/jira-git-workflow2.png)
 ### 2.4 Data Model Relationship Creation
-- ✅ Navigated to Port Builder
-- ✅ Located "Jira Issue" blueprint
-- ✅ Added relation to "Repository" blueprint with configuration:
+- Navigated to Port Builder
+- Located "Jira Issue" blueprint
+- Added relation to "Repository" blueprint with configuration:
   - Title: Repository
   - Identifier: github_repo_relation
   - Type: Relation
@@ -90,13 +96,15 @@ Successfully implemented end-to-end integration between Port, Jira, and GitHub w
   - Limit: (empty for many-to-many)
   - Required: No
 
+![Port GitHub Integration](screenshots/jira-issue-relation.png)
+
 ### 2.5 Integration Testing and Validation
-- ✅ Created test Jira issue "PORT-1" with title "Port Task 2"
-- ✅ Assigned both components to the issue:
+- Created test Jira issue "PORT-1" with title "Port Task 2"
+- Assigned both components to the issue:
   - ec2-finOps
   - rentrite-infra-gitOps
-- ✅ Triggered integration sync
-- ✅ Verified successful data mapping
+- Triggered integration sync
+- Verified successful data mapping
 
 #### Final Result Validation:
 Integration successfully created Jira issue entity with proper relations:
@@ -118,8 +126,8 @@ Integration successfully created Jira issue entity with proper relations:
 Successfully implemented a scorecard system that tracks open pull requests per repository with Gold/Silver/Bronze scoring logic.
 
 ### 3.1 Repository Blueprint Property Addition
-- ✅ Navigated to Port Builder → Repository blueprint
-- ✅ Added new property with configuration:
+- Navigated to Port Builder → Repository blueprint
+- Added new property with configuration:
   - Title: Open PRs Count
   - Identifier: openPRsCount
   - Type: Number
@@ -128,17 +136,18 @@ Successfully implemented a scorecard system that tracks open pull requests per r
   - Default Value: 0
 
 ![Repository Blueprint Property](screenshots/operPRCount.png)
+![Repository Blueprint Property](screenshots/operPRCount-2.png)
 
 ### 3.2 GitHub Integration Mapping Update
-- ✅ Updated GitHub integration mapping to include PR count:
+- Updated GitHub integration mapping to include PR count:
 
 ```yaml
 properties:
   openPRsCount: .open_issues_count
 ```
 
-- ✅ Mapping successfully captures open PR count from GitHub API
-- ✅ Integration tested and validated with repository data
+- Mapping successfully captures open PR count from GitHub API
+- Integration tested and validated with repository data
 
 #### Validation Result:
 Repository entity showing correct PR count:
@@ -146,11 +155,13 @@ Repository entity showing correct PR count:
 - Repository: matthew-akinola/rentrite-infra-gitOps
 - openPRsCount: 0 (initially, before test PRs created)
 
+![Repository Blueprint Property](screenshots/operPRCount-3.png)
+
 ### 3.3 Scorecard Creation and Configuration
 
-- ✅ Created new scorecard "Repository PR Management"
-- ✅ Applied to Repository blueprint
-- ✅ Configured scoring levels:
+- Created new scorecard "Repository PR Management"
+- Applied to Repository blueprint
+- Configured scoring levels:
 
 #### Scorecard Structure:
 - **Bronze** (Base level): 10+ open PRs
@@ -184,6 +195,9 @@ Repository entity showing correct PR count:
 - openPRsCount: 2
 - Scorecard Level: Gold (correctly evaluated as < 5 PRs)
 - Rules Status: Gold rule passed
+
+![Scorecard Results](screenshots/port-scorecard-3.png)
+![Scorecard Results](screenshots/port-scorecard-4.png)
 
 ## Exercise #4: GitHub Workflow Troubleshooting Guide
 
