@@ -175,8 +175,6 @@ Repository entity showing correct PR count:
 
 ![Scorecard Rules](screenshots/port-scorecard-2.png)
 
-![Scorecard Results](screenshots/port-scorecard-3.png)
-
 ### 3.4 Scorecard Testing and Validation
 
 - Created test pull requests in GitHub repository
