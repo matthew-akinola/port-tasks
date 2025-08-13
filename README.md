@@ -225,3 +225,13 @@ Identified the core issue: "IN PROGRESS" status indicates Port sent the trigger 
 - workflow_dispatch trigger requirement
 - YAML syntax validation
 - Input parameter alignment
+
+
+#### Other External Linkss
+1.  Port-Jira Integration Github Workflow Link:
+    - https://github.com/matthew-akinola/rentrite-infra-gitOps/blob/develop/.github/workflows/jira.yaml
+    - https://github.com/matthew-akinola/rentrite-infra-gitOps/actions
+2.  Repository With Open PRs
+    - https://github.com/matthew-akinola/ATM-Authentication/pulls
+    - https://github.com/matthew-akinola/rentrite-infra-gitOps/pulls
+    - https://github.com/matthew-akinola/ec2-finOps/pulls
