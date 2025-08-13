@@ -133,8 +133,8 @@ Successfully implemented a scorecard system that tracks open pull requests per r
   - Required: No
   - Default Value: 0
 
-![Repository Blueprint Property](screenshots/operPRCount.png)
-![Repository Blueprint Property](screenshots/operPRCount-2.png)
+![Repository Blueprint Property](screenshots/openPRCount.png)
+![Repository Blueprint Property](screenshots/openPRCount-2.png)
 
 ### 3.2 GitHub Integration Mapping Update
 - Updated GitHub integration mapping to include PR count:
@@ -153,7 +153,7 @@ Repository entity showing correct PR count:
 - Repository: matthew-akinola/rentrite-infra-gitOps
 - openPRsCount: 0 (initially, before test PRs created)
 
-![Repository Blueprint Property](screenshots/operPRCount-3.png)
+![Repository Blueprint Property](screenshots/openPRCount-3.png)
 
 ### 3.3 Scorecard Creation and Configuration
 
